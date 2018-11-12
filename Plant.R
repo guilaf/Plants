@@ -4,41 +4,23 @@ library(stringr)
 library(dplyr)
 library(ggplot2)
 
-#Plant 1
+#Pls branches sur tronc
 axiom="F"
-rules=list("F"="FF-[-F+F+F]+[+F-F-F]")
+rules=list("F"="F-[-F+F+F]+[F]")
 angle=22.5
 depth=4
 
-#Plant 2
-axiom="X"
-rules=list("X"="F[+X][-X]FX", "F"="FF")
-angle=25.7
-depth=7
-
-#Plant 3
-axiom="X"
-rules=list("X"="F[+X]F[-X]+X", "F"="FF")
-angle=20
-depth=7
-
-#Plant 4
-axiom="X"
-rules=list("X"="F-[[X]+X]+F[+FX]-X", "F"="FF")
+#Simple
+axiom="F"
+rules=list("F"="F-[F]+[+F]")
 angle=22.5
-depth=5
+depth=4
 
-#Plant 5
+#Plant Test
 axiom="F"
-rules=list("F"="F[+F]F[-F]F")
-angle=25.7
-depth=5
-
-#Plant 6
-axiom="F"
-rules=list("F"="F[+F]F[-F][F]")
-angle=20
-depth=5
+rules=list("F"="F+[-F+F-[F]]+[+F+F]")                               ##  rules=list("F"="F+[???F]")
+angle=15.5
+depth=4
 
 
 for (i in 1:depth) axiom=gsubfn(".", rules, axiom)
