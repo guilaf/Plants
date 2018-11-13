@@ -10,6 +10,20 @@ rules=list("F"="F-[-F+F+F]+[F]")
 angle=22.5
 depth=4
 
+#Sympa
+axiom="F"
+rules=list("F"="F-[-F+F+F]F+[F]")
+angle=22.5
+depth=4
+
+#Sympa2
+axiom="F"
+rules=list("F"="F-F[-F+F+F]+[F]")
+angle=22.5
+depth=4
+
+
+
 #Simple
 axiom="F"
 rules=list("F"="F-[F]+[+F]")
